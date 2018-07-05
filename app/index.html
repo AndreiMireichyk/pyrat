@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PYRAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes=192x191>
+    <link rel="icon" type="image/png" href="favicon/android-chrome-512x512.png" sizes=512x512>
+    <link rel="manifest" href="favicon/manifest.webmanifest">
+    <meta name="msapplication-config" content="./src/assets/favicon/browserconfig.xml"/>
+</head>
+<body>
+
+<header class="header header--full">
+    <img class="header__logo header__logo--full" src="./svg/logo.svg" alt="">
+</header>
+
+<section>
+    <form action="#" class="form">
+        <div class="form__control">
+            <input class="input input--name" type="text" name="name" placeholder="Name">
+        </div>
+        <div class="form__control">
+            <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts">
+        </div>
+        <div class="form__control">
+            <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…"></textarea>
+        </div>
+        <button class="btn btn-outline-dark">Отправить</button>
+    </form>
+</section>
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(function () {
+        $('header').click(function () {
+            var header = $(".header");
+            var logo = $(".header__logo");
+
+            if (header.hasClass("header--full")) {
+                header.removeClass("header--full");
+                logo.removeClass('header__logo--full');
+            } else {
+                header.addClass('header--full');
+                logo.addClass('header__logo--full');
+            }
+        });
+    });
+</script>
+</body>
+</html>
